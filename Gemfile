@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'bower-rails'
 gem 'foundation-rails'
+gem 'foundation-icons-sass-rails'
 gem 'angular-rails-templates'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'rails_12factor'

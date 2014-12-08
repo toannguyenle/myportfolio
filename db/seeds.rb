@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#   Mayor.create(name: 'Emanuel', city: cities.first)
+apps = App.create([
+  { name: 'myBeautyCase', app_url: 'https://mybeautycase.herokuapp.com/' },
+  { name: 'SocialTicTacToe', app_url: 'https://tttcg.firebaseapp.com/' },
+  { name: 'feedme', app_url: 'https://feedmeapp.herokuapp.com/' }
+   ])
