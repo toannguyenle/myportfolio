@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# So the dyno is always running aroundbundl
+gem 'newrelic_rpm'
 gem 'bower-rails'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
