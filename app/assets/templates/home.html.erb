@@ -1,6 +1,17 @@
-<div class="row">
-  <div ng-repeat="a in apps" class="small-12 large-4 columns">
-    {{a.name}}<br>
-    {{a.app_url}}
-  </div>
+<div class="row text-center">
+  <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
+    <li ng-repeat="a in apps | filter:query" class="project-tile">
+      <a href="{{a.app_url}}">
+        <div class="project-container">
+          <img ng-src="{{a.thumbnail_url1}}" class= "project-pic">
+          <div>
+            <h4>{{a.name}}</h4>
+            Built with: {{a.built_with}}
+            <p>{{a.description}}</p>
+            <p><small>{{a.app_url}}</small></p>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
 </div>

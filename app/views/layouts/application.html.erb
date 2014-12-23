@@ -12,24 +12,29 @@
   </head>
 
   <body ng-app="myApp">
-  <h1>UNDER DEVELOPMENT</h1>
-    <div class="icon-bar five-up">
-      <a ui-sref="home" class="item">
-        <i class="fi-home"></i>
-      </a>
-      <a ui-sref="app" class="item">
-        <i class="fi-bookmark"></i>
-      </a>
-      <a class="item">
-        <i class="fi-info"></i>
-      </a>
-      <a class="item">
-        <i class="fi-mail"></i>
-      </a>
-      <a class="item">
-        <i class="fi-like"></i>
-      </a>
-    </div>
-    <%= yield %>
+  <div class="contain-to-grid sticky">
+    <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+      <ul class="title-area">
+        <li class="name">
+          
+          <h1><a ui-sref="home"><img class="avatar" src="https://avatars1.githubusercontent.com/u/8865326?v=3&s=460"> TOAN LE / underdevelopment</a></h1>
+        </li>
+         <!-- MOBILE -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="has-form">
+            <input id="search-box" ng-model="query" type="text" placeholder="TYPE ANYTHING...">
+          </li>
+          <li id="contact-button"  class="text-center"><a ui-sref="app">CONTACT</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+
+    <%= yield %>  
   </body>
 </html>
