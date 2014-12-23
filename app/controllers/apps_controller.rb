@@ -27,6 +27,10 @@ class AppsController < ApplicationController
     app.destroy
     render nothing: true, status: 204
   end
+  # CUSTOM
+  def like
+
+  end
 
   private
 

@@ -12,11 +12,11 @@
   </head>
 
   <body ng-app="myApp">
+
   <div class="contain-to-grid sticky">
     <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
       <ul class="title-area">
         <li class="name">
-          
           <h1><a ui-sref="home"><img class="avatar" src="https://avatars1.githubusercontent.com/u/8865326?v=3&s=460"> TOAN LE / underdevelopment</a></h1>
         </li>
          <!-- MOBILE -->
@@ -26,15 +26,12 @@
       <section class="top-bar-section">
         <!-- Right Nav Section -->
         <ul class="right">
-          <li class="has-form">
-            <input id="search-box" ng-model="query" type="text" placeholder="TYPE ANYTHING...">
-          </li>
-          <li id="contact-button"  class="text-center"><a ui-sref="app">CONTACT</a></li>
+          <li ui-sref="home" class="has-form">PORTFOLIO</li>
+          <li ui-sref="app" class="has-form">CONTACT</li>
         </ul>
       </section>
     </nav>
   </div>
-
     <%= yield %>  
   </body>
 </html>

@@ -8,6 +8,11 @@ angular.module('myApp')
 
   $stateProvider
 
+    .state('index', {
+      url: '/',
+      templateUrl: 'index.html',
+      controller: 'HomeCtrl'
+    })
     .state('home', {
       url: '/home',
       templateUrl: 'home.html',

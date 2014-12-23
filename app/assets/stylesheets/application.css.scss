@@ -18,10 +18,12 @@
 @import 'foundation-icons';
 @import "foundation/components/block-grid";
 //Font from google Font
-@import url(https://fonts.googleapis.com/css?family=Lato);
-
+body, html {
+  height: 100%;
+}
 body  {
-  font-family: 'Lato', sans-serif;
+  font-family:'Raleway',Helvetica,Arial,sans-serif;
+  font-weight:300;
   background-image: url(bg.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -29,18 +31,23 @@ body  {
   background-size: cover;
   color: black;
 }
-#contact-button {
-  background-color: rgba(255,255,255,0);
-  font-family: 'Lato', sans-serif !important;
+a {
+  font-family:'Raleway',Helvetica,Arial,sans-serif;
+  font-weight:300;
   color: white;
-  border:2px black solid;
+}
+#contact-button {
+  color: white;
+  border:1px white solid;
   border-radius:5px;
-  margin: 10px 0;
-  width: 200px;
+  margin: 10px auto;
+  width: 300px;
   height: 45px;
+  padding: 10px;
 }
 #contact-button:hover{
   background-color:rgba(255,255,255,0.5);
+  color: black;
 }
 #search-box{
   background-color: rgba(255,255,255,0);
@@ -58,16 +65,76 @@ body  {
   border-radius: 50% 50%;
 }
 li.project-tile {
-  // height: 400px;
+  height: 400px;
   padding: 5px;
 }
 div.project-container{
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.9);
+  color: black;
   width: 100%;
   height: 100%;
   border-radius: 5px 5px 0 0;
 }
 img.project-pic{
+  width: 100%;
+  top: -1.5em;
   border-radius: 5px 5px 0 0;
-  width: "100%"
+}
+
+// CUSTOMIZE FOUNDATION TEMPLATE
+.hero{
+  background:url(angular_poster.png);
+  background-size:cover;
+  box-shadow:inset 0px 0px 0 2000px rgba(0,0,0,0.7);
+  height:80%; 
+}
+.intro-text{
+  padding-top:30%;
+  color:rgba(255,255,255,1);
+  text-align:center;
+}
+@media only screen and (min-width: 40.063em) {
+  .intro-text{
+  padding-top:15%;
+  }
+}
+@media only screen and (min-width: 64.063em) {
+.intro-text{
+  padding-top:12%;
+  }
+}
+.intro-text p{
+  font-size:30px;
+}
+.about,.work,.contact{
+  padding:50px 0 0 0;
+  }
+.about img{
+  width:250px;
+  height:250px;
+  border-radius:150px;
+  -webkit-border-radius:150px;
+  -moz-border-radius:150px;
+}
+.work img:hover{
+  opacity:0.5;
+  -webkit-transition:0.3s ease;
+  -moz-transition:0.3s ease;
+  -ms-transition:0.3s ease;
+  -o-transition:0.3s ease;
+  transition:0.3s ease;
+}
+.work li{
+  height:140px;
+  overflow:hidden;
+}
+// HORIZONTAL LINE
+hr {
+  border:0;
+  height:1px;
+  background-image:-webkit-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  background-image:-moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  background-image:-ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  background-image:-o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.75),rgba(0,0,0,0));
+  opacity:0.8;
 }
