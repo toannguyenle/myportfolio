@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   scope 'api', defaults: {format: :json} do
     resources :apps, only: [ :show, :index, :create, :update, :destroy]
   end
+  post 'like' => 'apps#like'
 end

@@ -11,5 +11,7 @@ class App
   field :thumbnail_url2, type: String
   field :thumbnail_url3, type: String
   field :like, type: Integer
+  field :twitter, type: String
+  field :hashtag, type: String
 
 end

@@ -18,9 +18,10 @@
           <p>Built with: {{a.built_with}}</p>
           <p><small>{{a.description}}</small></p>
           <p class="social-share-icons">
-            <i class="fi-social-twitter"></i>
-            <i class="fi-heart"></i>
-            <i class="fi-share"></i>
+            <a href="https://twitter.com/intent/tweet?hashtags={{a.hashtag}}&original_referer=http%3A%2F%2Ftoangular.com&text=Check%20out%20this%20app&tw_p=tweetbutton&url={{a.app_url}}&via=toannl"><i class="fi-social-twitter"></i></a>
+            <i class="fi-heart" data="{{a._id.$oid}}" ng-click="appLike(a._id.$oid)">
+              <span data="{{a._id.$oid}}" class="round radius label">{{a.like}}</span>
+            </i>
           </p>
           <a href="{{a.app_url}}" class="contact-button">APP SITE</a>
         </div>

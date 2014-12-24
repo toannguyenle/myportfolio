@@ -175,3 +175,30 @@ hr {
 .contact-icons {
   font-size: 2em;
 }
+
+// TWITTER
+i.fi-social-twitter:hover {
+  color: #55ACEE;
+}
+i.fi-share:hover {
+  color: #55ACEE;
+}
+// LIKE BUTTON
+i.fi-heart {
+  height: 35px;
+  width: 37px;
+  position: relative;
+}
+i.fi-heart:hover {
+  color: rgb(190, 190, 190);
+}
+
+// Like number badge
+.round.radius.label {
+  font-family:'Raleway',Helvetica,Arial,sans-serif;
+  font-weight:300;
+  position: absolute;
+  margin-bottom: 70px;
+  margin-left: -10px;
+  text-justify: center;
+}

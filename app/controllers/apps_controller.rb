@@ -6,7 +6,7 @@ class AppsController < ApplicationController
   end
 
   def show
-    planet = App.find(params[:id])
+    app = App.find(params[:id])
     render json: App, status: 201
   end
 
@@ -29,7 +29,11 @@ class AppsController < ApplicationController
   end
   # CUSTOM
   def like
-
+    app = App.find(params[:id])
+    puts app.like
+    app.like = app.like + 1
+    app.save
+    render json: nil, status: :ok
   end
 
   private

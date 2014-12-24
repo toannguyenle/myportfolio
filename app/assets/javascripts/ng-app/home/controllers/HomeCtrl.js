@@ -32,5 +32,18 @@ angular.module('myApp')
     $location.path('/app/'+appId);
   };
 
+  // LIKE ajax
+  $scope.appLike = function(appId) {
+    var media = $(".fi-heart[data='" + appId + "']")[0].style.color;
+    // POST LIKE
+    if (media === "rgb(190, 190, 190)" || media === "") {
+      $.post("/like", {id: appId},
+        function(){
+          $(".fi-heart[data='" + appId + "']")[0].style.color = "lightcoral";
+          var label = $(".round.radius.label[data='" + appId + "']")[0];
+          label.innerHTML = parseInt(label.innerHTML) + 1;
+        });
+    }
+  };
 
 }]);
