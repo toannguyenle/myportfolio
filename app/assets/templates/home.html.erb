@@ -1,27 +1,30 @@
 <div class="row text-center">
   <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
-    <li ng-repeat="a in apps | filter:query" class="project-tile">
-      <a href="{{a.app_url}}">
-        <div class="project-container">
-          <img ng-src="{{a.thumbnail_url1}}" class= "project-pic">
-          <div>
-            <h4>{{a.name}}</h4>
-            <p><small>{{a.app_url}}</small></p>
+    <li ng-repeat="a in apps | filter:query" class="project-tile f1_container">
+      <div class="f1_card shadow">
+        <!-- FRONT FACE -->
+        <div class="front face">
+          <div class="project-container">
+            <img ng-src="{{a.thumbnail_url1}}" class= "project-pic">
+            <div>
+              <h4>{{a.name}}</h4>
+              <p><small>{{a.app_url}}</small></p>
+            </div>
           </div>
         </div>
-      </a>
+        <!-- BACK FACE -->
+        <div class="back face center">
+          <h4>{{a.name}}</h4>
+          <p>Built with: {{a.built_with}}</p>
+          <p><small>{{a.description}}</small></p>
+          <p class="social-share-icons">
+            <i class="fi-social-twitter"></i>
+            <i class="fi-heart"></i>
+            <i class="fi-share"></i>
+          </p>
+          <button href="{{a.app_url}}" class="contact-button">APP SITE</button>
+        </div>
+      </div>
     </li>
   </ul>
-</div>
-
-<div id="f1_container">
-<div id="f1_card" class="shadow">
-  <div class="front face">
-    <img src="/images/Cirques.jpg"/>
-  </div>
-  <div class="back face center">
-    <p>This is nice for exposing more information about an image.</p>
-    <p>Any content can go here.</p>
-  </div>
-</div>
 </div>
