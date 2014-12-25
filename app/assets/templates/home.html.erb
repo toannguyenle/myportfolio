@@ -3,7 +3,7 @@
     <input class="search-bar" ng-model="query" placeholder="SEARCH ANYTHING...">
   </div>
 </div>
-<div class="row text-center">
+<div class="row text-center app-container">
   <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
     <li ng-repeat="a in apps | filter:query" class="project-tile f1_container">
       <div class="f1_card shadow">
@@ -19,7 +19,7 @@
         </div>
         <!-- BACK FACE -->
         <div class="back face center">
-          <h4>{{a.name}}</h4>
+          <h4 style="color:white">{{a.name}}</h4>
           <p>Built with: {{a.built_with}}</p>
           <p><small>{{a.description}}</small></p>
           <p class="social-share-icons">
