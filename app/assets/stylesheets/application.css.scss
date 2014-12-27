@@ -46,14 +46,14 @@ a {
   padding: 10px;
 }
 .search-bar {
-  border:2px white solid;
+  width: 100%;
+  border:1px white solid;
   font-family:'Raleway',Helvetica,Arial,sans-serif;
   font-weight:300;
-  font-size: 20px;
+  font-size: 15px;
   background-color: rgba(255,255,255,0);
   border-radius:5px;
-  margin: 20px auto;
-  width: 100%;
+  margin: 10px auto;
   height: 45px;
   padding: 0 20px;
 }
@@ -61,32 +61,40 @@ a {
   background-color:rgba(255,255,255,0.5);
   color: black;
 }
-#search-box{
-  background-color: rgba(255,255,255,0);
-  font-family: 'Lato', sans-serif;
-  border:2px black solid;
-  border-radius:5px;
-  margin: 10px 0;
-  width: 100%;
-  height: 45px;
-}
 .avatar {
   margin: 10px 0;
   width: 45px;
   height: 45px;
   border-radius: 50% 50%;
 }
-li.project-tile {
-  height: 630px;
-  padding: 5px;
-}
-div.project-container{
-  background-color: rgba(255,255,255,0.9);
+
+// PROJECT TILES
+// Outside container
+.project-tile {
+  position: relative;
+  height: 200px;
   color: black;
-  width: 100%;
+  border-radius: 5px 5px 0 0;
+  background-color: rgba(255,255,255,0.9);
+}
+.project-image{
+  position: absolute;
   height: 100%;
+  width: 100%;
   border-radius: 5px 5px 0 0;
 }
+.project-name {
+  position: absolute;
+  height: 20%;
+  width: 100%;
+  top: 80%;
+  padding: 15px 0 0 0;
+  color: white;
+  background-color: rgba(0,0,0,0.7);
+}
+
+
+
 img.project-pic{
   width: 100%;
   top: -1.5em;
