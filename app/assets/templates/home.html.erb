@@ -1,9 +1,13 @@
 <div class="row app-container">
-  <input class="search-bar" ng-model="query" placeholder="SEARCH ANYTHING...">
+  <input class="form-control search-bar" ng-model="query" placeholder="SEARCH TECHNOLOGIES USED..." typeahead="tech for tech in technologies | filter:$viewValue | limitTo:8">
 </div>
 <div class="row app-container">
   <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-4">
-    <li ng-repeat="a in apps | filter:query" class="f1_container">
+    <li ng-repeat="a in apps | filter:query" 
+        class="f1_container"
+        ng-init="overEdit=false"
+        ng-mouseover="overEdit=true"
+        ng-mouseleave="overEdit=false">
       <div class="project-tile">
         <div class="project-image" style="
           background: url({{a.thumbnail_url1}});
@@ -11,18 +15,15 @@
           background-repeat: no-repeat;
           background-size: cover;">
         </div>
-        <div class="project-name text-center">{{a.name}}</div>
+        <div class="text-center" ng-class="overEdit ? 'project-name-full':'project-name'">
+          {{a.name}}
+          <div ng-if="overEdit">
+            <small>{{a.built_with}}</small><br><br>
+            <a class="contact-button" ng-click="open(a._id.$oid)">DETAILS</a>
+          </div>
+        </div>
         
       </div>
-
-      <button data-reveal-id="myModal">Click Me For A Modal</button>
-
-<div id="myModal" class="reveal-modal" data-reveal>
-  <h2>Awesome. I have it.</h2>
-  <p class="lead">Your couch.  It is mine.</p>
-  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-  <a class="close-reveal-modal">&#215;</a>
-</div>
 <!--       <div class="f1_card shadow"> -->
         <!-- FRONT FACE -->
 <!--         <div class="front face">

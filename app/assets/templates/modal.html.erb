@@ -1,0 +1,78 @@
+<div class="app-modal">
+  <div class="app-modal-head">
+    <h3>{{app.name}}</h3>
+    <p class="social-share-icons">
+      <a href="https://twitter.com/intent/tweet?hashtags={{a.hashtag}}&original_referer=http%3A%2F%2Ftoangular.com&text=Check%20out%20this%20app&tw_p=tweetbutton&url={{a.app_url}}&via=toannl"><i class="fi-social-twitter"></i></a>
+      <i class="fi-heart" data="{{a._id.$oid}}" ng-click="appLike(a._id.$oid)">
+        <span data="{{a._id.$oid}}" class="round radius label">{{a.like}}</span>
+      </i>
+    </p>
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+      <li>
+        <div class="project-tile">
+          <div class="project-image" style="
+            background: url({{app.thumbnail_url1}});
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;">
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="project-tile">
+          <div class="project-image" style="
+            background: url({{app.thumbnail_url2}});
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;">
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="project-tile">
+          <div class="project-image" style="
+            background: url({{app.thumbnail_url3}});
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;">
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="app-modal-body">
+    <ul class="no-bullet">
+      <li>
+        <small>{{app.app_url}}</small>
+      </li>
+      <li>
+        <li><strong>Built with</strong></li>
+        <ul class="inline-list">
+          <li ng-repeat="tech in app.built_with">
+            <span class="round label"
+                  ng-class-even="'success'"
+                  ng-class-odd="'info'">
+              &nbsp; &nbsp; {{tech}} &nbsp; &nbsp;
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <li>
+          <strong>Description</strong>
+        </li>
+        <li>{{app.description}}</li>
+      </li>
+    </ul>
+  </div>
+  <div class="app-modal-footer text-center">
+    <p class="social-share-icons">
+            <a href="https://twitter.com/intent/tweet?hashtags={{app.hashtag}}&original_referer=http%3A%2F%2Ftoangular.com&text=Check%20out%20this%20app&tw_p=tweetbutton&url={{app.app_url}}&via=toannl"><i class="fi-social-twitter"></i></a>
+          <i class="fi-heart" data="{{app._id.$oid}}" ng-click="appLike(app._id.$oid)">
+            <span data="{{app._id.$oid}}" class="like-number">{{app.like}}</span>
+          </i>
+    </p>
+    <a class="contact-button-modal" href="{{a.app_url}}">VISIT APP</a>
+  </div>
+</div>
+<a class="close-reveal-modal" ng-click="cancel()">&#215;</a>

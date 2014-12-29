@@ -1,1 +1,1 @@
-angular.module('myApp', ['ui.router', 'templates']);
+angular.module('myApp', ['ui.router', 'templates', 'mm.foundation']);

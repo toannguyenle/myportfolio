@@ -1,9 +1,21 @@
 angular.module('myApp')
 
-.controller('HomeCtrl',['$location','$scope','api', function($location, $scope, api) {
+.controller('HomeCtrl',['$location','$scope','$modal','api', function($location, $scope, $modal, api) {
   api.getApps()
   .then(function(data){
     $scope.apps = data.data;
+    // Get all the technologies built with from each app and aggregate them to help search faster
+    $scope.technologies = [];
+    for (var i = 0; i < data.data.length; i++) {
+      $scope.technologies = $scope.technologies.concat(data.data[i].built_with.split(", "));
+    };
+
+    // Only unique values
+    function onlyUnique(value, index, self) { 
+    return self.indexOf(value) === index;
+    }
+    // Bind to the view variable
+    $scope.technologies = $scope.technologies.filter( onlyUnique );
   });
 
   $scope.addApp = function(app){
@@ -32,18 +44,21 @@ angular.module('myApp')
     $location.path('/app/'+appId);
   };
 
-  // LIKE ajax
-  $scope.appLike = function(appId) {
-    var media = $(".fi-heart[data='" + appId + "']")[0].style.color;
-    // POST LIKE
-    if (media === "rgb(190, 190, 190)" || media === "") {
-      $.post("/like", {id: appId},
-        function(){
-          $(".fi-heart[data='" + appId + "']")[0].style.color = "lightcoral";
-          var label = $(".round.radius.label[data='" + appId + "']")[0];
-          label.innerHTML = parseInt(label.innerHTML) + 1;
-        });
-    }
+
+  // APP MODAL
+
+  $scope.open = function (appId) {
+
+    var modalInstance = $modal.open({
+      templateUrl: 'modal.html',
+      controller: 'ModalInstanceCtrl',
+      resolve: {
+        appId: function () {
+          return appId;
+        }
+      }
+    });
+
   };
 
 }]);

@@ -7,7 +7,7 @@ class AppsController < ApplicationController
 
   def show
     app = App.find(params[:id])
-    render json: App, status: 201
+    render json: app, status: 200
   end
 
 
