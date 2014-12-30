@@ -7,9 +7,7 @@ class App
   field :description, type: String
   field :app_url, type: String
   field :source_url, type: String
-  field :thumbnail_url1, type: String
-  field :thumbnail_url2, type: String
-  field :thumbnail_url3, type: String
+  field :thumbnail_url, type: Array
   field :like, type: Integer
   field :twitter, type: String
   field :hashtag, type: String

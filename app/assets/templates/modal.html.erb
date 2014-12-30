@@ -2,30 +2,10 @@
   <div class="app-modal-head">
     <h3>{{app.name}}</h3>
     <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
-      <li>
+      <li ng-repeat="thumb in app.thumbnail_url">
         <div class="project-tile">
           <div class="project-image" style="
-            background: url({{app.thumbnail_url1}});
-            background-position: top center;
-            background-repeat: no-repeat;
-            background-size: cover;">
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="project-tile">
-          <div class="project-image" style="
-            background: url({{app.thumbnail_url2}});
-            background-position: top center;
-            background-repeat: no-repeat;
-            background-size: cover;">
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="project-tile">
-          <div class="project-image" style="
-            background: url({{app.thumbnail_url3}});
+            background: url({{thumb}});
             background-position: top center;
             background-repeat: no-repeat;
             background-size: cover;">
@@ -61,10 +41,11 @@
   </div>
   <div class="app-modal-footer text-center">
     <p class="social-share-icons">
-            <a href="https://twitter.com/intent/tweet?hashtags={{app.hashtag}}&original_referer=http%3A%2F%2Ftoangular.com&text=Check%20out%20this%20app&tw_p=tweetbutton&url={{app.app_url}}&via=toannl"><i class="fi-social-twitter"></i></a>
-          <i class="fi-heart" data="{{app._id.$oid}}" ng-click="appLike(app._id.$oid)">
-            <span data="{{app._id.$oid}}" class="like-number">{{app.like}}</span>
-          </i>
+      <a href="{{app.source_url}}"><i class="fi-social-github"></i></a>
+      <a href="https://twitter.com/intent/tweet?hashtags={{app.hashtag}}&original_referer=http%3A%2F%2Ftoangular.com&text=Check%20out%20this%20app&tw_p=tweetbutton&url={{app.app_url}}&via=toannl"><i class="fi-social-twitter"></i></a>
+      <i class="fi-heart" data="{{app._id.$oid}}" ng-click="appLike(app._id.$oid)">
+        <span data="{{app._id.$oid}}" class="like-number">{{app.like}}</span>
+      </i>
     </p>
     <a class="contact-button-modal" href="{{app.app_url}}">VISIT APP</a>
   </div>
