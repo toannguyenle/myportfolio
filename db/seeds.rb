@@ -63,7 +63,7 @@ LAST24 built with Javascript, CSS, HTML and Ruby on Rails using API from Twitter
                     "https://s3-us-west-1.amazonaws.com/myportfolio.toan/port_home.png",
                     "https://s3-us-west-1.amazonaws.com/myportfolio.toan/port_apps.png",
                     "https://s3-us-west-1.amazonaws.com/myportfolio.toan/port_1.png",
-                    "https://s3-us-west-1.amazonaws.com/myportfolio.toan/port_contact"],
+                    "https://s3-us-west-1.amazonaws.com/myportfolio.toan/port_contact.png"],
     like: 0,
     twitter: "Hungry? Let's order some food",
     hashtag: "hungry"},
