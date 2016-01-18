@@ -7,6 +7,8 @@ gem 'foundation-icons-sass-rails'
 gem 'angular-rails-templates'
 #MongoDB
 gem 'mongoid', github: 'mongoid/mongoid'
+gem 'bson_ext'
+gem 'mongo'
 # heroku assets handler
 gem 'rails_12factor'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
