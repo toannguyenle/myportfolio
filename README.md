@@ -1,6 +1,6 @@
 # Toan Nguyen Le - [underdevelopment]
 
-This is my portfolio page. But really, if you can also use this to register an account and publish yourself a portfolio (will be at my domain name).
+This is my portfolio page. But really, if you can also use this to register an account and publish yourself a portfolio (will be at my domain name)
 
 Built with: AngularJS, Ruby on Rails (for now).
 
