@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 # So the dyno is always running aroundbundl
 gem 'newrelic_rpm'
 gem 'bower-rails'
-gem 'foundation-rails'
+gem 'foundation-rails', '5.4.5'
 gem 'foundation-icons-sass-rails'
 gem 'angular-rails-templates'
 #MongoDB
 gem 'mongoid', github: 'mongoid/mongoid'
-gem 'bson_ext'
-gem 'mongo'
+gem 'bson_ext',        group: :production
+gem 'mongo',        group: :production
 # heroku assets handler
 gem 'rails_12factor'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
