@@ -7,6 +7,21 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 apps = App.create([
+  { name: "beepMeIn",
+    app_url: "https://beepmein.herokuapp.com/",
+    built_with: "Javascript, jQuery, CSS, HTML, Ruby on Rails, Heroku, Raspberry Pi, API, IoT, Zurb Foundation, MongoDB, OmniAuth, oAuth, Devise",
+    snippet: "",
+    description: "beepMeIn is my first personal project to toy with the Raspberry Pi. The Pi is used as a door opener, hooked up to my physical electrical door relay. While this web interface allows me to put in tracking codes. Usage: So I won't have to be home, waiting for that package. Carrier can just scan package, and safely leave it in my corridor. I also hook this up with Push Notification through PushOver API so that I know exactly when my package arrived.",
+    source_url: "https://github.com/toannguyenle/yougotmail",
+    thumbnail_url: ["http://www.toangular.com/assets/screenshots/bmi_raspberry.jpg",
+                    "http://www.toangular.com/assets/screenshots/bmi_landing.png",
+                    "http://www.toangular.com/assets/screenshots/bmi_login.png",
+                    "http://www.toangular.com/assets/screenshots/bmi_signup.png",
+                    "http://www.toangular.com/assets/screenshots/bmi_scan.jpg",
+                    "http://www.toangular.com/assets/screenshots/bmi_ups.jpg"],
+    like: 6,
+    twitter: "Let's me in!",
+    hashtag: "yougotmail"},
   { name: 'LAST24',
     app_url: 'https://last24.herokuapp.com/',
     built_with: "Javascript, jQuery, CSS, HTML, Ruby on Rails, Heroku, Twitter APIs, Instagram APIs, Google Maps APIs, Zurb Foundation, MongoDB, OmniAuth, oAuth, Devise" ,
